@@ -414,7 +414,9 @@ else
 
   BASE_CFLAGS += -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes -pipe
 
+ifneq ($(CROSS_COMPILING),1)
   BASE_CFLAGS += -I/usr/include -I/usr/local/include
+endif
 
   OPTIMIZE = -O2 -fvisibility=hidden
 
